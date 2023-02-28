@@ -1,0 +1,31 @@
+* {
+    margin : 0;
+    padding : 0;
+    text-decoration: none;
+}
+
+.dashboard-container {
+    display: flex;
+    flex-direction: row;
+}
+
+.side-container {
+    display: flex;
+    flex-direction: column;
+    background: rgb(232, 231, 231);
+    height: 100vh;
+}
+
+main {
+    width: 100%;
+}
+
+.main-header {
+    height: 8%;
+    width: 100%;
+    background-color: rgb(247, 247, 247);
+}
+
+.main-content {
+    padding: 10px;
+}

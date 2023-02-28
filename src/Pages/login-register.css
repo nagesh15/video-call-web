@@ -1,0 +1,46 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    padding: 10px;
+    width: 30em;
+    margin-top : 5%;
+    border : 1px solid black;
+    box-shadow: 0px 0px 10px rgb(177, 175, 175);
+}
+
+.container h1 {
+    text-align: center;
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+.container div {
+    display: flex;
+    margin: 3px;
+    flex-direction: column;
+    margin-left: 15%;
+    margin-bottom: 20px;
+}
+
+.container div label {
+    margin-bottom: 3px;
+}
+
+.container div input {
+    width: 75%;
+}
+
+.container div p{
+    margin: 0 auto;
+}
+
+.container div p.error-msg {
+    margin: 3px 0;
+    color: red;
+    
+}
+
+.container div a {
+    cursor: pointer;
+}
