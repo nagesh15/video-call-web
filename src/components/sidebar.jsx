@@ -29,6 +29,10 @@ const SideBar = () => {
                 <div className="icon"><FiPhoneCall /></div>
                 <div className="menu-name" style={{display : isToggle ? 'block' : 'none'}}>Call History</div>
             </NavLink>
+            <NavLink to="logout" className='link'>
+                <div className="icon"><FiPhoneCall /></div>
+                <div className="menu-name" style={{display : isToggle ? 'block' : 'none'}}>Logout</div>
+            </NavLink>
         </>
     );
 };
