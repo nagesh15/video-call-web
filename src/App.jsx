@@ -6,6 +6,7 @@ import Dashboard from './Pages/dashboard';
 import Home from './Pages/home';
 import CallHistory from './Pages/call-history';
 import UserContext from './store/UserContext';
+import Logout from './Pages/logout';
 
 
 const router = createBrowserRouter([
@@ -16,16 +17,18 @@ const router = createBrowserRouter([
     element : <Dashboard />,
     children :  [
       {path : '/dashboard', element : <Home />},
-      {path : 'call_history' , element : <CallHistory />}
+      {path : 'call_history' , element : <CallHistory />},
+      {path : 'logout' , element : <Logout />}
     ]  
   }
 ])
 
 function App() {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
+  const [accessToken, setAccessToken] = useState('');
 
   return (
-    <UserContext.Provider value={{isAuthenticated, setIsAuthenticated}}>
+    <UserContext.Provider value={{isAuthenticated,accessToken, setIsAuthenticated, setAccessToken}}>
         <RouterProvider router={router} />
     </UserContext.Provider>
       
