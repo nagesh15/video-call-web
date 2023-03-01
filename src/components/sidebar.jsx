@@ -1,6 +1,7 @@
 import React, {useState} from "react";
 import { FaBars, FaHome } from 'react-icons/fa';
 import {FiPhoneCall} from 'react-icons/fi'
+import {BiLogOut} from 'react-icons/bi'
 import { Link, NavLink } from "react-router-dom";
 import './sidebar.css';
 
@@ -30,7 +31,7 @@ const SideBar = () => {
                 <div className="menu-name" style={{display : isToggle ? 'block' : 'none'}}>Call History</div>
             </NavLink>
             <NavLink to="logout" className='link'>
-                <div className="icon"><FiPhoneCall /></div>
+                <div className="icon"><BiLogOut /></div>
                 <div className="menu-name" style={{display : isToggle ? 'block' : 'none'}}>Logout</div>
             </NavLink>
         </>

@@ -102,7 +102,7 @@ const Register = () => {
               if (err.response.status == 422) {
                 alert('email already exists');
               } else {
-                console.log(err);
+                
               }
             });
     };

@@ -7,7 +7,8 @@ import axios from "axios";
 import UserContext from "../store/UserContext";
 
 const Login = () => {
-    const { isAuthenticated, setIsAuthenticated } = useContext(UserContext);
+    const { isAuthenticated, accessToken, setIsAuthenticated, setAccessToken } =
+        useContext(UserContext);
     let navigate = useNavigate();
 
     const initialState = {
@@ -24,7 +25,6 @@ const Login = () => {
 
     const [formInputs, setFormInputs] = useState(initialState);
     const [formErrors, setFormErrors] = useState({});
-    const [accessToken, setAccessToken] = useState('');
 
     const onChangeHandler = (event) => {
         //get the name and value property of input field that generates the event
@@ -66,32 +66,21 @@ const Login = () => {
 
     const registrationApiCall = () => {
         axios
-            .post(
-                "http://localhost:4000/api/session/new",
-                {
-                    email: formInputs.email,
-                    password: formInputs.password
-                }
-            )
+            .post("http://localhost:4000/api/session/new", {
+                email: formInputs.email,
+                password: formInputs.password,
+            })
             .then((response) => {
                 //console.log(response);
                 if (response.status === 201) {
                     setIsAuthenticated(true);
-                    console.log(response.data.access_token);
                     setAccessToken(response.data.access_token);
-                    
-
                     alert("Login Successfully");
-                    console.log(accessToken);
                     setFormInputs(initialState);
                 }
             })
             .catch((err) => {
-                // if (err.response.status == 422) {
-                //     alert("email already exists");
-                // } else {
-                    console.log(err);
-                // }
+                console.log(err);
             });
     };
 
