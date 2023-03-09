@@ -1,0 +1,13 @@
+li {
+    display: flex;
+    padding: 10px;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 2px rgb(202, 201, 201);
+}
+
+li div {
+    flex: 1;
+    font-size: 18px;
+    text-align: center;
+}

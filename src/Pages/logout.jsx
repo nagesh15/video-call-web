@@ -16,25 +16,21 @@ const Logout = (props) => {
     }
 
     const logoutHandler = () => {
-        console.log('logout');
         if(isAuthenticated) {
             setIsAuthenticated(false);
         }
-        
-        
-        console.log(isAuthenticated);
-        // navigate('/');
     }
 
     return (
         <Modal open={isOpen} close={modalClose}>
             <div className="logout-container">
                 <div className="text">
-                    <h4>Do you wish to logout?</h4>
+                    <h4>Are you sure,</h4>
+                    <h4>you want to logout?</h4>
                 </div>
                 <div className="btn-container">
-                    <button className="btn-cancel" onClick={modalClose}>Cancel</button>
-                    <button className="btn-logout" onClick={logoutHandler}>LogOut</button>
+                    <button className="button btn-cancel" onClick={modalClose}>Cancel</button>
+                    <button className="button btn-logout" onClick={logoutHandler}>LogOut</button>
                 </div>
             </div>
         </Modal>

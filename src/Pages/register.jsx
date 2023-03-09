@@ -99,7 +99,7 @@ const Register = () => {
                 } 
             })
             .catch((err) => {
-              if (err.response.status == 422) {
+              if (err.response.status == 400) {
                 alert('email already exists');
               } else {
                 
