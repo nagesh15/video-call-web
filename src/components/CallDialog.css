@@ -1,0 +1,42 @@
+.dialog-container {
+    display: flex;
+    flex-direction: column;
+    column-gap: 1em;
+    row-gap: 0.5em;
+}
+
+.input p {
+   font-family:"Google Sans",Helvetica,Arial,sans-serif;;
+    font-size: medium;
+}
+
+.input input {
+    margin: 0 auto;
+    padding: 10px;
+    border-radius: 15px;
+    border: 1px solid black;
+    width: 35vh;
+}
+
+.dialog-container .btn-container {
+    display: flex;
+    justify-content: space-around;
+}
+
+.dialog-container .btn-container button {
+    padding : 10px;
+    border: 1px solid black;
+    border-radius: 20px;
+    width: 30%;
+    box-shadow: 2px 2px 4px rgb(202, 200, 200);
+}
+
+.btn-cancel {
+    background-color: white;
+    color: #33b8cd;
+}
+
+.btn-call {
+    background-color:  #33b8cd;
+    color: white;
+}

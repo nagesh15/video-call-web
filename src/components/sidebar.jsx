@@ -18,7 +18,7 @@ const SideBar = () => {
         <>
             <div className="sidebar" style={{width : isToggle ? '190px' : '50px'}}>
                 <div className="name-section">
-                    <h1 className="user-name" style={{display : isToggle ? 'block' : 'none'}}>Hi Sandeep</h1>
+                    
                     <div className="bars" style={{marginLeft : isToggle ? '30px': '0px'}}><FaBars onClick={toggleHanlder}/></div>
                 </div>
             </div>

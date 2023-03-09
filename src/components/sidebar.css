@@ -5,12 +5,8 @@
 
 .name-section {
     display: flex;
-    align-items: center;
+    justify-content: flex-end;
     padding: 20px 15px;
-}
-
-.user-name {
-    font-size: 20px;
 }
 
 .bars {
@@ -20,6 +16,7 @@
 }
 
 .link {
+    font-size: 20px;
     display: flex;
     color: black;
     padding: 10px 15px;
@@ -29,7 +26,7 @@
 }
 
 .link:hover {
-    background: grey;
+    background: rgb(0, 121, 158);
     color: white;
     transition: all 0.5s;
 }

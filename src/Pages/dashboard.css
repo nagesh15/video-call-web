@@ -12,7 +12,7 @@
 .side-container {
     display: flex;
     flex-direction: column;
-    background: rgb(232, 231, 231);
+    background: #33b8cd;
     height: 100vh;
 }
 
@@ -27,5 +27,5 @@ main {
 }
 
 .main-content {
-    padding: 10px;
+    padding: 5px 5px 0 5px;
 }
